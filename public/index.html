@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+  <link rel="icon" href="favicon.jpg">
+  <link href="https://cdn.bootcss.com/animate.css/3.7.0/animate.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script charset="utf-8" src="https://map.qq.com/api/js?v=2.exp&key=6LLBZ-QMLCX-HNA4L-T3ADN-4O3V5-BFFLB"></script>
+  <script type="text/javascript" src="https://3gimg.qq.com/lightmap/components/geolocation/geolocation.min.js"></script>
+  <script src="https://cdn.bootcss.com/axios/0.19.2/axios.min.js"></script>
+  <title>myomall</title>
+  <style>
+    .loader {
+      position: relative;
+      width: 2.5em;
+      height: 2.5em;
+      transform: rotate(165deg);
+    }
+
+    .loader:before,
+    .loader:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: 0.5em;
+      height: 0.5em;
+      border-radius: 0.25em;
+      transform: translate(-50%, -50%);
+    }
+
+    .loader:before {
+      animation: before 2s infinite;
+    }
+
+    .loader:after {
+      animation: after 2s infinite;
+    }
+
+    @keyframes before {
+      0% {
+        width: 0.5em;
+        box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+      }
+
+      35% {
+        width: 2.5em;
+        box-shadow: 0 -0.5em rgba(225, 20, 98, 0.75), 0 0.5em rgba(111, 202, 220, 0.75);
+      }
+
+      70% {
+        width: 0.5em;
+        box-shadow: -1em -0.5em rgba(225, 20, 98, 0.75), 1em 0.5em rgba(111, 202, 220, 0.75);
+      }
+
+      100% {
+        box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+      }
+    }
+
+    @keyframes after {
+      0% {
+        height: 0.5em;
+        box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+      }
+
+      35% {
+        height: 2.5em;
+        box-shadow: 0.5em 0 rgba(61, 184, 143, 0.75), -0.5em 0 rgba(233, 169, 32, 0.75);
+      }
+
+      70% {
+        height: 0.5em;
+        box-shadow: 0.5em -1em rgba(61, 184, 143, 0.75), -0.5em 1em rgba(233, 169, 32, 0.75);
+      }
+
+      100% {
+        box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+      }
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    .loader {
+      position: absolute;
+      top: calc(50% - 1.25em);
+      left: calc(50% - 1.25em);
+    }
+    #app {
+      display: flex;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <noscript>
+    <strong>We're sorry but myomall doesn't work properly without JavaScript enabled. Please enable it to
+      continue.</strong>
+  </noscript>
+  <div id="app">
+    <div class="loader"></div>
+    <div style="margin: auto;color:rgba(225, 20, 98, 0.75);">OMALL网努力加载中...</div>
+  </div>
+</body>
+</html>
